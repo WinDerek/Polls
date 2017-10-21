@@ -1,4 +1,4 @@
-Spring Boot Example - A Website for Polls
+Spring Boot Example - A Website Backend for Polls
 ========
 
 Project Structure

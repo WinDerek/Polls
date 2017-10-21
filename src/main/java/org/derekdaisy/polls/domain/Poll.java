@@ -17,13 +17,6 @@ public class Poll {
 
     public Poll() {}
 
-    public Poll(Long id, String name, String description, Integer votesNum) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.votesNum = votesNum;
-    }
-
     public Long getId() {
         return id;
     }
