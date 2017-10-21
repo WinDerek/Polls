@@ -17,21 +17,21 @@ Base URL: `localhost:6789`
    - Content-Type: `application/json;charset=UTF-8`
 
 2. **C(Create)**
-   - URL: `/createPoll/{name}/{description}`
+   - URL: `/poll/{name}/{description}`
    - Functionality: Creates a new poll and returns the created poll
    - Request Method: POST
    - Content-Type: `application/json;charset=UTF-8`
 
 3. **U(Update)**
-   - URL: `/votePoll/{id}`
+   - URL: `/poll/{id}`
    - Functionality: Votes for a poll specified by the `id` and returns the voted poll
-   - Request Method: POST
+   - Request Method: PUT
    - Content-Type: `application/json;charset=UTF-8`
 
 4. **D(Delete)**
-   - URL: `/deletePoll/{id}`
+   - URL: `/poll/{id}`
    - Functionality: Deletes a poll specified by the `id` and returns a list of all the polls
-   - Request Method: POST
+   - Request Method: DELETE
    - Content-Type: `application/json;charset=UTF-8`
 
 Build from Scratch

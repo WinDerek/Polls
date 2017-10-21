@@ -9,10 +9,6 @@ public interface PollsRepository extends JpaRepository<Poll, Long> {
 
     Poll findById(Long id);
 
-    List<Poll> findByName(String name);
-
-    List<Poll> findByNameLike(String name);
-
     List<Poll> findByNameContains(String name);
 
 }

@@ -22,7 +22,7 @@ public class PollsController {
         return pollsService.getAllPolls();
     }
 
-    @RequestMapping(value = "/createPoll/{name}/{description}", method = RequestMethod.POST,
+    @RequestMapping(value = "/poll/{name}/{description}", method = RequestMethod.POST,
             produces = "application/json;charset=UTF8")
     public Poll createPoll(@PathVariable("name") String name,
                            @PathVariable("description") String description) {
@@ -34,7 +34,7 @@ public class PollsController {
         return poll;
     }
 
-    @RequestMapping(value = "/votePoll/{id}", method = RequestMethod.POST,
+    @RequestMapping(value = "/poll/{id}", method = RequestMethod.PUT,
             produces = "application/json;charset=UTF-8")
     public Poll votePoll(@PathVariable("id") Long id) {
         Poll poll = pollsService.findPollById(id);
@@ -43,14 +43,14 @@ public class PollsController {
         return poll;
     }
 
-    @RequestMapping(value = "/deletePoll/{id}", method = RequestMethod.POST,
+    @RequestMapping(value = "/poll/{id}", method = RequestMethod.DELETE,
             produces = "application/json;charset=UTF-8")
     public List<Poll> deletePoll(@PathVariable("id") Long id) {
         pollsService.deletePollById(id);
         return pollsService.getAllPolls();
     }
 
-    @RequestMapping(value = "/searchPolls/{name}", method = RequestMethod.GET,
+    @RequestMapping(value = "/polls/{name}", method = RequestMethod.GET,
             produces = "application/json;charset=UTF-8")
     public List<Poll> searchPolls(@PathVariable("name") String name) {
         return pollsService.findPollsByNameContains(name);
